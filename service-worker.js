@@ -1,0 +1,9 @@
+self.addEventListener("install",e=>{
+  e.waitUntil(
+    caches.open("cauca-v1").then(c=>c.addAll([
+      "./",
+      "./index.html",
+      "./base.js"
+    ]))
+  );
+});
